@@ -47,7 +47,7 @@ else:
     for i in range(1,201):  #*2
         driver.execute_script(f'arguments[0].scroll({initialPos},{i*300});',element)
         initialPos=i*300
-        sleep(2)
+        sleep(3)
 
 sleep(2)
 try:
@@ -55,7 +55,7 @@ try:
 except:
     print('hotels not found')
 else:
-    print(len(allResults))
+    print(f'Total elements found: {len(allResults)}')
 
     for i in allResults:
         i.click()
