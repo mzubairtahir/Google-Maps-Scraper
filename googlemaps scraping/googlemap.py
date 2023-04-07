@@ -18,6 +18,7 @@ Here you will insert link of page of google maps, having search results, that yo
 
 link_of_page="https://www.google.com/maps/search/hotels+in+California,+USA/@35.0254043,-121.5368567,7z/data=!3m1!4b1"
 number_of_scrolls=10  
+output_format= 0    # it can be 0(excel) 1(csv)
 
 
 #==========================================
@@ -143,7 +144,11 @@ else:
 
 
 dataFrame=pd.DataFrame(finalData)
-dataFrame.to_excel('output.xlsx',index=False)
+if output_format==0:
+    dataFrame.to_excel('output.xlsx',index=False)
+elif output_format==1:
+    dataFrame.to_csv('output.xlsx',index=False)
+
 logo()
 
 
