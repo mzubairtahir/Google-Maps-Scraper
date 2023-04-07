@@ -5,6 +5,7 @@
 <p>This repository contains a Python script that scrapes Google Maps search results for business information such as business name, location, website, and contact number.</p>
 <h2>🚀 Getting Started</h2>
 
+
 <h3>Prerequisites</h3>
 
 <p>Before running the script, make sure you have the following packages installed:</p>
@@ -33,11 +34,17 @@ pip install selenium pandas bs4
 
 <ul>
 <li>Google Maps search results page URL</li>
-<li>Number of times to scroll the page</li>
+<br>
+<img src="Readme images/sample page.png" alt="Sample page">
+<br>
+<br>
+<li>Number of times to scroll the results</li>
 <li>Output format: 0 (Excel) or 1 (CSV)</li>
 </ul>
 
-<p>After providing the required information, the script will start scraping the search results and store the business information in a file in the format you specified.</p>
+
+
+<p>After providing the required information, run the script and it will start scraping the search results and store the business information in a file in the format you specified.</p>
 
 <h2>🤝 Contributing</h2>
 
