@@ -16,15 +16,15 @@ Here you will insert link of page of google maps, having search results, that yo
 '''
 
 
-link_of_page="https://www.google.com/maps/search/hotels+in+California,+USA/@35.0254043,-121.5368567,7z/data=!3m1!4b1"
+link_of_page=""    # <---- link of page
 number_of_scrolls=10  
-output_format= 0    # it can be 0(excel) 1(csv)
+output_format= 0    # <---  it can be 0(excel) 1(csv)
 
 
 #==========================================
 
 ''' 
-These links are used to fetch exact data from info fields of that particular location.
+These links are used to fetch exact data from info fields of that particular place.
 Look below for better understanding of use of these links
 '''
 
@@ -69,7 +69,7 @@ def parsing():
         data={}
 
         html=infoSheet.get_attribute('outerHTML')
-        soup=BeautifulSoup(html,'html.parser') #soup of explain page
+        soup=BeautifulSoup(html,'html.parser') #soup of info page of that place
         name=soup.find('h1',class_='DUwDvf fontHeadlineLarge').text.strip()
         data.update({'Name':name})
         
@@ -115,12 +115,12 @@ else:
         sleep(2)
 
 try:
-    allResults=driver.find_elements_by_class_name('hfpxzc')  #all the locations in result
+    allResults=driver.find_elements_by_class_name('hfpxzc')  #all the places in result
 except:
     allResults=driver.find_elements_by_class_name('hfpxzc')  #re-founding
     
 else:
-    print(f'Total locations found: {len(allResults)}')
+    print(f'Total places found: {len(allResults)}')
 
     for i in allResults:
         sleep(1)
@@ -131,7 +131,7 @@ else:
             try:
                 i.send_keys(Keys.RETURN)
             except:
-                continue # if any location card is not clickable
+                continue # if any place's card is not clickable
             else:
                 parsing()
                 
