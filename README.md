@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>🗺️ Google Map Scraper</h1>
+<h1>🗺️ Google Maps Scraper</h1>
 <p>This repository contains a Python script that scrapes Google Maps search results for business information such as business name, location, website, and contact number.</p>
 <h2>🚀 Getting Started</h2>
 
