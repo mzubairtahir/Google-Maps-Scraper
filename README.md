@@ -1,3 +1,8 @@
+
+-----------------
+## Update:
+This repo is updated to a gui <a href="https://github.com/Zubdata/Google-Maps-Scraper">tool</a>
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -52,6 +57,10 @@ pip install selenium pandas bs4
 
 <h2>📝 License</h2>
 
+
+
 <p>This project is licensed under the GNU General Public License v3.0 - see the LICENSE.md file for details.</p>
 </body>
 </html>
+
+
